@@ -42,12 +42,12 @@ jobs:
                 - name: Deploy to EC2
                   run: |
                     ssh -o StrictHostKeyChecking=no ubuntu@${{ secrets.EC2_HOST }} << 'EOF'
-                    source ~/.bashrc
+                    export PATH=$PATH:$(npm bin -g)
                     cd /home/ubuntu/Simple_CI_CD
                     git pull origin main
-                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/npm install
-                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/npm run build
-                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/pm2 restart HTTP-SERVER
+                    npm install
+                    npm run build
+                    pm2 restart HTTP-SERVER
                     EOF
               
                
