@@ -6,7 +6,8 @@
   "scripts": {
     "build": "npx tsc",
     "dev": "npx tsc && node ./dist/app.js",
-    "start":"node ./dist/app.js"
+    "start":"node ./dist/app.js",
+    "pm2 start":"pm2 start ./dist/app.js --name HTTP-SERVER"
   },
   "keywords": [],
   "author": "",
