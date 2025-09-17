@@ -45,9 +45,9 @@ jobs:
                     source ~/.bashrc
                     cd /home/ubuntu/Simple_CI_CD
                     git pull origin main
-                    /usr/bin/npm install
-                    /usr/bin/npm run build
-                    /usr/local/bin/pm2 restart HTTP-SERVER
+                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/npm install
+                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/npm run build
+                    /home/ubuntu/.nvm/versions/node/v22.13.0/bin/pm2 restart HTTP-SERVER
                     EOF
               
                
