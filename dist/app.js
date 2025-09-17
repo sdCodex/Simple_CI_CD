@@ -9,6 +9,9 @@ const port = 3000;
 app.get("/", (req, res) => {
     res.status(200).json("Hello Everyone");
 });
+app.get("/home", (req, res) => {
+    res.status(200).json("You are at home");
+});
 app.listen(port, () => {
     console.log(`Listening to port ${port}`);
 });
