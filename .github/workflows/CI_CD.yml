@@ -34,7 +34,7 @@ jobs:
           environment: production
           steps: 
                 - name: Setup SSH
-                  uses: webfactory/ssh-agent@v0.9.0
+                  uses: webfactory/ssh-agent@v0.9.1
                   
                   with:
                     ssh-private-key: ${{ secrets.Actions_Key }}
